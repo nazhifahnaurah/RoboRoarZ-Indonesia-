@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RoboRoarZ Indonesia 2025 adalah kompetisi robotik intenasional dimana Politeknik Negeri Batam bekerjasama dengan SUTD Singapore.">
+  <meta name="keywords" content="roboroarz, kompetisi robot, robotik indonesia 2025, lomba robot internasional, battle of smart racers, event robot untuk siswa, kepulauan riau, riau, robot, SUTD">
+  <meta name="google-site-verification" content="uNRrUy2BFGcd1E0s8MlPxZTT0gqSqqkD6ju0JLoKioY" />
+  
+  <meta property="og:title" content="RoboRoarZ Indonesia 2025">
+  <meta property="og:description" content="Kompetisi robotik internasional untuk siswa. Tunjukkan strategi dan kecepatan robotmu!">
+  <meta property="og:image" content="https://roboroarz.polibatam.ac.id/assets/logo.png">
+  <meta property="og:url" content="https://roboroarz.polibatam.ac.id/">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  
+  <title>RoboRoarZ Indonesia 2025</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+    .navbar { background: white; padding: 10px 5vw; position: sticky; top: 0; z-index: 9999; }
+    .hero { background: #333; color: white; text-align: center; padding: 100px 20px; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <nav id="navbar" class="navbar">
+  <a href="#home">
+    <div class="logo"> 
+      <img src="assets/logo.png" alt="RoboRoarZ Logo">
+    </div>
+  </a>
+    
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <div class="nav-overlay" id="nav-overlay"></div>
+    
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#organizers">Organizers</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#robot">Robot</a></li>
+      <li><a href="competition.html">Competition</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <!-- <li><a href="#gallery">Gallery</a></li> -->
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <!-- Background Image Slideshow -->
+    <div class="hero-slideshow">
+      <div class="slide active" style="background-image: url('assets/main.jpeg');"></div>
+      <div class="slide" style="background-image: url('assets/main2.jpeg')"></div>
+      <div class="slide" style="background-image: url('assets/main3.jpeg');"></div>
+      <div class="slide" style="background-image: url('assets/main4.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/main5.jpeg');"></div>
+      <div class="slide" style="background-image: url('assets/main6.jpeg');"></div>
+      <div class="slide" style="background-image: url('assets/main7.jpeg');"></div>
+    </div>
+    
+    <!-- Navigation Dots -->
+    <div class="slideshow-dots">
+      <span class="dot active" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+    
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="title-main">RoboRoarZ Indonesia 2025</span><br>
+        <span class="title-sub">Battle of Smart Racers</span>
+      </h1>
+      <div class="event-info">
+        <h2>Event Details</h2>
+        <h3>Politeknik Negeri Batam</h3> 
+        <p>12 - 13 August 2025</p>
+        <div class="registration-status">
+          <!-- <div class="status-badge open">
+            <span class="status-indicator"></span>
+            <span class="status-text">REGISTRATION IS CLOSED</span>
+          </div> -->
+          <!-- <div class="registration-deadline">
+            <span class="deadline-text">Registration will close July 31, 2025 or earlier if full </span>
+            </div>
+        </div> -->
+        <div class="countdown">
+          <div class="countdown-item">
+            <span class="countdown-number" id="days">0</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="hours">0</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="minutes">0</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="seconds">0</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="https://forms.gle/sBAFMpkKSuURvXSq9" class="btn btn-primary">Register Now</a>
+        <a href="#about" class="btn btn-secondary">Learn More</a>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="organizers" class="section center">
+    <h2>Organizers</h2>
+    <div class="organizer-grid">
+      <div class="organizer-item">
+        <img src="assets/PolBatam.png" alt="Politeknik Negeri Batam" />
+      </div>
+    </div>
+  </section>
+
+  <section id="co-organizers" class="section center">
+    <h2>Co-Organizers</h2>
+    <div class="organizer-grid">
+      <div class="organizer-item">
+        <img src="assets/sutd.png" alt="SUTD" />
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsors" class="section center">
+    <h2>Sponsors and Partners</h2>
+    <div class="sponsor-grid">
+      <div class="sponsor-item">
+        <img src="assets/JDF_logo.jpg" alt="JDF" />
+      </div>
+      <div class="sponsor-item">
+        <img src="assets/weefaa-logo.jpg" alt="Weefaa" />
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="about-content">
+      <p>
+        RoboRoarZ is a design-centered reconfigurable robotics competition that fosters creativity, innovation, and collaboration among the participants.
+        All the participants will compete using the SUTD-designed reconfigurable robotic platform "Smorphi".
+      </p>
+      <p>
+        Our goal is to establish a vibrant local and international community that unleashes the power of reconfigurable robots in solving real-world challenges.
+      </p>
+      <ul>
+        <li>The competition is open to the participants from senior high school.</li>
+        <li>Each team must have 3 to 5 members or be 15-19 years old.</li>
+        <li>A Smorphi robot will be provided at no cost for all competing teams.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="robot" class="section center">
+    <h2>Standard Robot Platform</h2>
+    <div class="robot-cards">      
+      <div class="robot-card">
+        <div class="video-container">
+          <div class="video-placeholder" data-video-local="assets/Introduction_to_Smorphi.mp4" onclick="playLocalVideo(this)">
+            <img src="assets/cover1.png" alt="SharePoint Video Thumbnail" class="video-thumbnail">
+            <div class="play-button"></div>
+            <div class="loading-spinner"></div>
+            <div class="video-overlay">
+              <span class="video-title">Introducing Smorphi</span>
+            </div>
+          </div>
+        </div>
+        <div class="robot-info">
+          <h3 class="robot-title">Introducing Smorphi</h3>
+          <p class="robot-description">Watch how Smorphi robots can be configured for different movement patterns</p>
+        </div>
+      </div>
+
+      <div class="robot-card">
+        <div class="video-container">
+          <div class="video-placeholder" data-video-local="assets/RoboroarZ_Singapore_2025.mp4" onclick="playLocalVideo(this)">
+            <img src="assets/cover.jpeg" alt="SharePoint Video Thumbnail" class="video-thumbnail">
+            <div class="play-button"></div>
+            <div class="loading-spinner"></div>
+            <div class="video-overlay">
+              <span class="video-title">RoboroarZ Singapore 2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="robot-info">
+          <h3 class="robot-title">RoboroarZ Singapore 2025</h3>
+          <p class="robot-description">Watch the video RoboRoarZ Singapore 2025</p>
+        </div>
+      </div>
+
+      <div class="robot-card">
+        <div class="video-container">
+          <div class="video-placeholder" data-video-id="OkzNq6RLPEc" onclick="playVideo(this)">
+            <img src="" id="thumb3" alt="Robot Configuration Demo" class="video-thumbnail">
+            <div class="play-button"></div>
+            <div class="loading-spinner"></div>
+            <div class="video-overlay">
+              <span class="video-title">1st RoboRoarZ Robotic Competition</span>
+            </div>
+          </div>
+        </div>
+        <div class="robot-info">
+          <h3 class="robot-title">Example of Competition Format</h3>
+          <p class="robot-description">A lot of excitement, passion, team spirit, eagerness to learn and very positive vibes around Wefaa's Smorphi robots at the First RoboRoarZ Competition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Accordion Style) -->
+  <section id="faq" class="section center" style="background:#f8fafc;">
+    <h2 style="text-align:center;font-size:2rem;font-weight:800;margin-bottom:2rem;">Frequently Asked Questions</h2>
+    <div class="faq-list" style="max-width:700px;margin:0 auto;text-align:left;">
+      <div class="faq-item" style="border-bottom:1px solid #e5e7eb;">
+        <button class="faq-question" style="width:100%;background:none;border:none;padding:1rem 0;font-size:1.1rem;font-weight:600;color:#3b82f6;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">Who can participate in RoboRoarZ Indonesia 2025?<span class="faq-toggle">+</span></button>
+        <div class="faq-answer" style="display:none;padding-bottom:1rem;color:#333;">Senior high school students are eligible to participate. Each team must consist of 3 to 5 members.</div>
+      </div>
+      <div class="faq-item" style="border-bottom:1px solid #e5e7eb;">
+        <button class="faq-question" style="width:100%;background:none;border:none;padding:1rem 0;font-size:1.1rem;font-weight:600;color:#3b82f6;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">Is there a registration fee?<span class="faq-toggle">+</span></button>
+        <div class="faq-answer" style="display:none;padding-bottom:1rem;color:#333;">No, registration is free.</div>
+      </div>
+      <div class="faq-item" style="border-bottom:1px solid #e5e7eb;">
+        <button class="faq-question" style="width:100%;background:none;border:none;padding:1rem 0;font-size:1.1rem;font-weight:600;color:#3b82f6;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">What is the main challenge in the competition?<span class="faq-toggle">+</span></button>
+        <div class="faq-answer" style="display:none;padding-bottom:1rem;color:#333;">Teams must program and control their robot to race autonomously, follow lines, navigate tracks, and overcome technical obstacles.</div>
+      </div>
+      <div class="faq-item" style="border-bottom:1px solid #e5e7eb;">
+        <button class="faq-question" style="width:100%;background:none;border:none;padding:1rem 0;font-size:1.1rem;font-weight:600;color:#3b82f6;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">How do I register?<span class="faq-toggle">+</span></button>
+        <div class="faq-answer" style="display:none;padding-bottom:1rem;color:#333;">You can register your team by clicking the "Register Now" button on the homepage or visiting the registration link provided.</div>
+      </div>
+      <div class="faq-item" style="border-bottom:1px solid #e5e7eb;">
+        <button class="faq-question" style="width:100%;background:none;border:none;padding:1rem 0;font-size:1.1rem;font-weight:600;color:#3b82f6;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">Do participants need to bring anything?<span class="faq-toggle">+</span></button>
+        <div class="faq-answer" style="display:none;padding-bottom:1rem;color:#333;">Yes, a laptop.</div>
+      </div>
+      <div class="faq-item" style="border-bottom:1px solid #e5e7eb;">
+        <button class="faq-question" style="width:100%;background:none;border:none;padding:1rem 0;font-size:1.1rem;font-weight:600;color:#3b82f6;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">Are robots provided?<span class="faq-toggle">+</span></button>
+        <div class="faq-answer" style="display:none;padding-bottom:1rem;color:#333;">Yes, they are provided by the organizers.</div>
+      </div>
+      <div class="faq-item" style="border-bottom:1px solid #e5e7eb;">
+        <button class="faq-question" style="width:100%;background:none;border:none;padding:1rem 0;font-size:1.1rem;font-weight:600;color:#3b82f6;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">Is accommodation provided by the organizers?<span class="faq-toggle">+</span></button>
+        <div class="faq-answer" style="display:none;padding-bottom:1rem;color:#333;">No, accommodation is provided by each school.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="contact">
+      <h2>CONTACT US</h2>
+      <p class="contact-info">
+        Gedung Utama Lt. 1, Politeknik Negeri Batam, Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota, Batam, Riau Islands Province
+      </p>
+      <div class="contact-container">
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+          </div>
+          <div class="form-group full-width">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group full-width">
+            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>RoboRoarZ Indonesia 2025</h3>
+        <p>Battle of Smart Racers</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#robot">Robot</a></li>
+          <li><a href="competition.html">Competition</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <p>Politeknik Negeri Batam </p>
+        <p>Jl. Ahmad Yani, Batam Kota, Kota Batam, Kepulauan Riau</p>
+        <p>Indonesia 29461</p>
+      </div>
+    </div>
+    <p class="copyright">© RoboRoarZ. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile Navigation Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const navLinksItems = document.querySelectorAll('.nav-links a');
+
+    
+    function closeMobileMenu() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        if (navOverlay) {
+            navOverlay.classList.remove('active');
+        }
+    }
+
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            if (navOverlay) {
+                navOverlay.classList.toggle('active');
+            }
+        });
+    }
+
+    if (navOverlay) {
+        navOverlay.addEventListener('click', closeMobileMenu);
+    }
+
+    navLinksItems.forEach(item => {
+        item.addEventListener('click', closeMobileMenu);
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            closeMobileMenu();
+        }
+    });
+
+    if (window.innerWidth > 768) {
+        closeMobileMenu();
+    }
+});
+
+const style = document.createElement('style');
+style.textContent = `
+    @media (min-width: 769px) {
+        .nav-overlay {
+            display: none !important;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+    // SharePoint video function
+    function openSharePointVideo() {
+      const sharePointUrl = 'https://sutdapac-my.sharepoint.com/:v:/g/personal/prabakaran_sutd_edu_sg/ERDvc63zQdlCkD18FzBu9UoBJQn0FYD3vb-HMgqyfi5rRA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=cDoWGJ';
+      window.open(sharePointUrl, '_blank');
+    }
+    
+    // YouTube Thumbnail Functions
+    function getYouTubeThumbnail(videoId, quality = 'maxresdefault') {
+      return `https://img.youtube.com/vi/${videoId}/${quality}.jpg`;
+    }
+
+    function loadThumbnail(videoId, imgElement) {
+      const qualities = ['maxresdefault', 'sddefault', 'hqdefault', 'mqdefault'];
+      let currentQuality = 0;
+
+      function tryLoad() {
+        const img = new Image();
+        img.onload = function() {
+          imgElement.src = this.src;
+          imgElement.style.opacity = '1';
+        };
+        img.onerror = function() {
+          currentQuality++;
+          if (currentQuality < qualities.length) {
+            tryLoad();
+          } else {
+            imgElement.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgwIiBoZWlnaHQ9IjM2MCIgdmlld0JveD0iMCAwIDQ4MCAzNjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0ODAiIGhlaWdodD0iMzYwIiBmaWxsPSIjMzMzIi8+Cjx0ZXh0IHg9IjI0MCIgeT0iMTgwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iIGZvcnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMCI+VmlkZW8gVGh1bWJuYWlsPC90ZXh0Pgo8L3N2Zz4K';
+            imgElement.style.opacity = '1';
+          }
+        };
+        img.src = getYouTubeThumbnail(videoId, qualities[currentQuality]);
+      }
+
+      imgElement.style.opacity = '0';
+      imgElement.style.transition = 'opacity 0.3s ease';
+      tryLoad();
+    }
+
+    let slideIndex = 1;
+    let slideInterval;
+
+    function startSlideshow() {
+      slideInterval = setInterval(() => {
+        slideIndex++;
+        if (slideIndex > 7) slideIndex = 1;
+        showSlide(slideIndex);
+      }, 4000); 
+    }
+
+    function showSlide(n) {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+      
+      slideIndex = n;
+      
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      if (slides[slideIndex - 1]) {
+        slides[slideIndex - 1].classList.add('active');
+      }
+      if (dots[slideIndex - 1]) {
+        dots[slideIndex - 1].classList.add('active');
+      }
+    }
+
+    function currentSlide(n) {
+      clearInterval(slideInterval); 
+      showSlide(n);
+     
+      setTimeout(() => {
+        startSlideshow();
+      }, 10000);
+    }
+
+    function playVideo(element) {
+      const videoId = element.getAttribute('data-video-id');
+      
+      if (!videoId) {
+        alert('Video tidak tersedia');
+        return;
+      }
+      
+      const spinner = element.querySelector('.loading-spinner');
+      const playButton = element.querySelector('.play-button');
+      const overlay = element.querySelector('.video-overlay');
+      
+      if (spinner) spinner.style.display = 'block';
+      if (playButton) playButton.style.display = 'none';
+      if (overlay) overlay.style.display = 'none';
+      
+      setTimeout(() => {
+        element.innerHTML = `
+          <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        `;
+      }, 500);
+    }
+
+    function playLocalVideo(element) {
+      const videoSrc = element.getAttribute('data-video-local');
+      const spinner = element.querySelector('.loading-spinner');
+      const playButton = element.querySelector('.play-button');
+      const overlay = element.querySelector('.video-overlay');
+      if (spinner) spinner.style.display = 'block';
+      if (playButton) playButton.style.display = 'none';
+      if (overlay) overlay.style.display = 'none';
+      setTimeout(() => {
+        element.innerHTML = `
+          <video width="100%" height="100%" controls autoplay style="border-radius:10px;object-fit:cover;">
+            <source src="${videoSrc}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        `;
+      }, 500);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Load YouTube thumbnails
+      const videoElements = [
+        { id: 'cOHIRPZTXrw', thumb: 'thumb1' },
+        { id: 'O5tYLUwOXLM', thumb: 'thumb2' },
+        { id: 'OkzNq6RLPEc', thumb: 'thumb3' }
+      ];
+
+      videoElements.forEach(video => {
+        const imgElement = document.getElementById(video.thumb);
+        if (imgElement) {
+          loadThumbnail(video.id, imgElement);
+        }
+      });
+
+      // Start slideshow
+      startSlideshow();
+      
+      // Countdown functionality
+      const countDownDate = new Date("August 12, 2025 08:00:00").getTime();
+      const countdownFunc = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Update countdown numbers
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+        
+        if (distance < 0) {
+          clearInterval(countdownFunc);
+          document.querySelector(".countdown").innerHTML = '<div style="grid-column: 1/-1; color: #ff6b6b; font-weight: bold; font-size: 1.2rem;">The Event is Now Underway</div>';
+        }
+      }, 1000);
+    });
+
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 0) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+    
+    // Validate form
+    if (!name || !email || !subject || !message) {
+        alert('Please fill in all fields');
+        return;
+    }
+    
+    // Show loading state
+    const submitBtn = document.querySelector('.submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    // EmailJS configuration 
+    const serviceID = 'roboroarz';          
+    const templateID = 'template_woww6xe';       
+    const publicKey = '4UGwYSm-bNTdBmXg7';         
+    
+    // Initialize EmailJS
+    emailjs.init(publicKey);
+    
+    // Send email
+    emailjs.send(serviceID, templateID, {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message,
+        to_email: 'roboroarz@polibatam.ac.id'
+    })
+    .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Message sent successfully!');
+        document.getElementById('contactForm').reset();
+    })
+    .catch(function(error) {
+        console.log('FAILED...', error);
+        alert('Failed to send message. Please try again.');
+    })
+    .finally(function() {
+        // Reset button
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    });
+});
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Optional: Preload thumbnails for better performance
+    function preloadThumbnails() {
+      const videoIds = ['cOHIRPZTXrw', 'O5tYLUwOXLM', 'OkzNq6RLPEc'];
+      
+      videoIds.forEach(videoId => {
+        const img = new Image();
+        img.src = getYouTubeThumbnail(videoId);
+      });
+    }
+
+    // Call preload when page is fully loaded
+    window.addEventListener('load', preloadThumbnails);
+
+    // FAQ Accordion Functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+faqQuestions.forEach(q => {
+  q.addEventListener('click', function() {
+    const answer = this.nextElementSibling;
+    const toggle = this.querySelector('.faq-toggle');
+    if (answer.style.display === 'block') {
+      answer.style.display = 'none';
+      toggle.textContent = '+';
+    } else {
+      // Close all other answers
+      document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+      document.querySelectorAll('.faq-toggle').forEach(t => t.textContent = '+');
+      answer.style.display = 'block';
+      toggle.textContent = '–';
+    }
+  });
+});
+  </script>
+</body>
+</html>
